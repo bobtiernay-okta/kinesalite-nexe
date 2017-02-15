@@ -83,11 +83,8 @@ index bf3715a..8159c91 100644
 +
 EOF
 
-
 # Build
 nexe -i cli.js -o ./kinesalite
-
-git apply 
 ```
 
 ## Deploy

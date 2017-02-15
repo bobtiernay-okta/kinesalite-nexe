@@ -1,6 +1,6 @@
 # kinesalite-nexe
 
-Single binary for [Kinesalite](https://github.com/mhart/kinesalite).
+A convenient single binary for [Kinesalite](https://github.com/mhart/kinesalite) built using [nexe](https://github.com/nexe/nexe). The resulting binary has no runtime dependencies on `npm` / `node`.
 
 ## Build
 ```shell
@@ -85,6 +85,14 @@ EOF
 
 # Build
 nexe -i cli.js -o ./kinesalite
+```
+
+## Run
+
+To run with arguments, a slight invocation change is required to accomodate `npm` args added by the `nexe` build:
+
+```bash
+./kinesalite <npm-args> -- <args>
 ```
 
 ## Deploy

@@ -8,11 +8,10 @@ yum install -y git make gcc gcc-c++ make nodejs
 npm install nexe -g
 
 # Checkout
-git clone https://github.com/mhart/kinesalite.git
+git clone https://github.com/mhart/kinesalite.git && cd kinesalite
 
 # Patch (see https://github.com/nexe/nexe#doesnt-support-dynamic-require-statements)
 git apply <<EOF
-[root@2efa80d9707f sandbox]# cat patch
 diff --git a/index.js b/index.js
 index bf3715a..8159c91 100644
 --- a/index.js
@@ -80,5 +79,9 @@ index bf3715a..8159c91 100644
 +
 EOF
 
+# Setup
+npm install
+
 # Build
-nexe -i cli.js -o ./kinesalite
+nexe -i cli.js -o /mnt/kinesalite
+

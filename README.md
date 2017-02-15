@@ -89,3 +89,7 @@ nexe -i cli.js -o ./kinesalite
 
 git apply 
 ```
+
+## Deploy
+
+Copy to `dist/<version>/<tarball>` and commit

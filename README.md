@@ -5,7 +5,7 @@ A convenient single binary for [Kinesalite](https://github.com/mhart/kinesalite)
 ## Build
 
 ```shell
-docker run -it -v $(pwd)/build.sh:/build.sh -v $(pwd):/mnt amazonlinux /build.sh
+docker run -it -v $(pwd):/mnt amazonlinux /bin/bash -c "$(cat build.sh)"
 ```
 
 ## Run
